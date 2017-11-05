@@ -1,8 +1,8 @@
 """
 Predict file
 """
-import deepneuralnet as net
 import random
+import deepneuralnet as net
 import tflearn.datasets.mnist as mnist
 from skimage import io
 
