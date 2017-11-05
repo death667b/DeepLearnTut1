@@ -17,7 +17,8 @@ rand_image = random.randint(0, len(testX) - 1)
 x = testX[rand_image].reshape((28, 28, 1))
 
 result = model.predict([x])[0] # Predict
-prediction = result.index(max(result)) # The index represents the number of the predicted in this case
+prediction = result.tolist().index(max(result))
+#prediction = result.index(max(result)) # The index represents the number of the predicted in this case
 print('Prediction', prediction)
 
 io.imsave('testimage.jpg', x.reshape(28, 28)) # This shows the image in the computer for you to see
